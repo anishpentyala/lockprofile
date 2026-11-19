@@ -1,0 +1,250 @@
+{
+  "after_ambiguity": {
+    "profiles": 0,
+    "witness": null
+  },
+  "after_python_incompatible": {
+    "profiles": 0,
+    "witness": null
+  },
+  "applicability_changed": {
+    "profiles": 0,
+    "witness": null
+  },
+  "bdd_nodes": 2,
+  "before_ambiguity": {
+    "profiles": 0,
+    "witness": null
+  },
+  "before_python_incompatible": {
+    "profiles": 0,
+    "witness": null
+  },
+  "changed_profiles": {
+    "profiles": 0,
+    "witness": null
+  },
+  "common_permitted_profiles": 1,
+  "comparable_profiles": 1,
+  "default_invocation": {
+    "after": {
+      "ambiguous": false,
+      "permitted": true,
+      "python_incompatible": false,
+      "selected": {
+        "colorama": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
+              },
+              "size": 27697,
+              "url": "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
+            },
+            "version": "0.4.6",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+                },
+                "size": 25335,
+                "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl"
+              }
+            ]
+          }
+        ],
+        "iniconfig": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7"
+              },
+              "size": 4793,
+              "url": "https://files.pythonhosted.org/packages/f2/97/ebf4da567aa6827c909642694d71c9fcf53e5b504f2d96afea02718862f3/iniconfig-2.1.0.tar.gz"
+            },
+            "version": "2.1.0",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "9deba5723312380e77435581c6bf4935c94cbfab9b1ed33ef8d238ea168eb760"
+                },
+                "size": 6050,
+                "url": "https://files.pythonhosted.org/packages/2c/e1/e6716421ea10d38022b952c159d5161ca1193197fb744506875fbb87ea7b/iniconfig-2.1.0-py3-none-any.whl"
+              }
+            ]
+          }
+        ],
+        "packaging": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79"
+              },
+              "size": 313412,
+              "url": "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz"
+            },
+            "version": "26.3",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+                },
+                "size": 129956,
+                "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl"
+              }
+            ]
+          }
+        ],
+        "tqdm": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"
+              },
+              "size": 169737,
+              "url": "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz"
+            },
+            "version": "4.67.1",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"
+                },
+                "size": 78540,
+                "url": "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "before": {
+      "ambiguous": false,
+      "permitted": true,
+      "python_incompatible": false,
+      "selected": {
+        "colorama": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
+              },
+              "size": 27697,
+              "url": "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
+            },
+            "version": "0.4.6",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+                },
+                "size": 25335,
+                "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl"
+              }
+            ]
+          }
+        ],
+        "iniconfig": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7"
+              },
+              "size": 4793,
+              "url": "https://files.pythonhosted.org/packages/f2/97/ebf4da567aa6827c909642694d71c9fcf53e5b504f2d96afea02718862f3/iniconfig-2.1.0.tar.gz"
+            },
+            "version": "2.1.0",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "9deba5723312380e77435581c6bf4935c94cbfab9b1ed33ef8d238ea168eb760"
+                },
+                "size": 6050,
+                "url": "https://files.pythonhosted.org/packages/2c/e1/e6716421ea10d38022b952c159d5161ca1193197fb744506875fbb87ea7b/iniconfig-2.1.0-py3-none-any.whl"
+              }
+            ]
+          }
+        ],
+        "packaging": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79"
+              },
+              "size": 313412,
+              "url": "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz"
+            },
+            "version": "26.3",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+                },
+                "size": 129956,
+                "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl"
+              }
+            ]
+          }
+        ],
+        "tqdm": [
+          {
+            "sdist": {
+              "hashes": {
+                "sha256": "f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"
+              },
+              "size": 169737,
+              "url": "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz"
+            },
+            "version": "4.67.1",
+            "wheels": [
+              {
+                "hashes": {
+                  "sha256": "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"
+                },
+                "size": 78540,
+                "url": "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "changed": false
+  },
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.11.18",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_python_implementation": "CPython",
+    "platform_release": "synthetic-kernel",
+    "platform_system": "Linux",
+    "platform_version": "synthetic-version",
+    "python_full_version": "3.11.18",
+    "python_version": "3.11",
+    "sys_platform": "linux"
+  },
+  "explicit_profiles": 1,
+  "features": {
+    "dependency_groups": [],
+    "extras": []
+  },
+  "package_changes": [],
+  "receipts": {
+    "after": {
+      "bytes": 2934,
+      "sha256": "473152f94ec7626c02fa5e4bfe90e5d2a7508627ea343afcf5b9889577d0f077"
+    },
+    "before": {
+      "bytes": 2934,
+      "sha256": "473152f94ec7626c02fa5e4bfe90e5d2a7508627ea343afcf5b9889577d0f077"
+    },
+    "environment": {
+      "bytes": 385,
+      "sha256": "097b376c05f58d85596f45da2ec0ca494154a6dffc58173cf1f12eaf76a8a934"
+    }
+  },
+  "schema_version": 1,
+  "scope": "declared version/source-candidate selection; not installation or artifact bytes",
+  "status": "EQUIVALENT_IN_PROFILE"
+              }
