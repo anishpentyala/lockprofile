@@ -1,0 +1,12 @@
+[project]
+name = "lockprofile-control"
+version = "1.0"
+requires-python = ">=3.11"
+dependencies = ["packaging==26.3"]
+
+[project.optional-dependencies]
+color = ["colorama==0.4.6"]
+progress = ["tqdm==4.67.1"]
+
+[dependency-groups]
+dev = ["iniconfig==2.1.0"]
