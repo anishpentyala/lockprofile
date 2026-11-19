@@ -1,0 +1,13 @@
+{
+  "implementation_name": "cpython",
+  "implementation_version": "3.11.18",
+  "os_name": "nt",
+  "platform_machine": "AMD64",
+  "platform_python_implementation": "CPython",
+  "platform_release": "11",
+  "platform_system": "Windows",
+  "platform_version": "10.0.22631",
+  "python_full_version": "3.11.18",
+  "python_version": "3.11",
+  "sys_platform": "win32"
+}
