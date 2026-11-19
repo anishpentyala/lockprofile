@@ -1,0 +1,149 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=77
+* Getting build dependencies for sdist...
+running egg_info
+creating src/lockprofile.egg-info
+writing src/lockprofile.egg-info/PKG-INFO
+writing dependency_links to src/lockprofile.egg-info/dependency_links.txt
+writing entry points to src/lockprofile.egg-info/entry_points.txt
+writing requirements to src/lockprofile.egg-info/requires.txt
+writing top-level names to src/lockprofile.egg-info/top_level.txt
+writing manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+reading manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+* Building sdist...
+running sdist
+running egg_info
+writing src/lockprofile.egg-info/PKG-INFO
+writing dependency_links to src/lockprofile.egg-info/dependency_links.txt
+writing entry points to src/lockprofile.egg-info/entry_points.txt
+writing requirements to src/lockprofile.egg-info/requires.txt
+writing top-level names to src/lockprofile.egg-info/top_level.txt
+reading manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+running check
+creating lockprofile-0.1.0
+creating lockprofile-0.1.0/evidence
+creating lockprofile-0.1.0/evidence/uv-control
+creating lockprofile-0.1.0/examples
+creating lockprofile-0.1.0/src/lockprofile
+creating lockprofile-0.1.0/src/lockprofile.egg-info
+creating lockprofile-0.1.0/tests
+copying files to lockprofile-0.1.0...
+copying LICENSE -> lockprofile-0.1.0
+copying MANIFEST.in -> lockprofile-0.1.0
+copying README.md -> lockprofile-0.1.0
+copying pyproject.toml -> lockprofile-0.1.0
+copying evidence/QUALIFICATION.md -> lockprofile-0.1.0/evidence
+copying evidence/build.log -> lockprofile-0.1.0/evidence
+copying evidence/drop-skipped-variable-count.log -> lockprofile-0.1.0/evidence
+copying evidence/equate-different-identities.log -> lockprofile-0.1.0/evidence
+copying evidence/example-report.json -> lockprofile-0.1.0/evidence
+copying evidence/forget-nonmembership.log -> lockprofile-0.1.0/evidence
+copying evidence/ignore-ambiguity.log -> lockprofile-0.1.0/evidence
+copying evidence/mutation_checks.py -> lockprofile-0.1.0/evidence
+copying evidence/mutations.json -> lockprofile-0.1.0/evidence
+copying evidence/tests-python311.log -> lockprofile-0.1.0/evidence
+copying evidence/tests-python315.log -> lockprofile-0.1.0/evidence
+copying evidence/uv-control/pylock.toml -> lockprofile-0.1.0/evidence/uv-control
+copying evidence/uv-control/pyproject.toml -> lockprofile-0.1.0/evidence/uv-control
+copying evidence/uv-control/reference-selection.json -> lockprofile-0.1.0/evidence/uv-control
+copying evidence/uv-control/self-comparison.json -> lockprofile-0.1.0/evidence/uv-control
+copying evidence/uv-control/version.txt -> lockprofile-0.1.0/evidence/uv-control
+copying examples/after.toml -> lockprofile-0.1.0/examples
+copying examples/before.toml -> lockprofile-0.1.0/examples
+copying examples/linux311.json -> lockprofile-0.1.0/examples
+copying src/lockprofile/__init__.py -> lockprofile-0.1.0/src/lockprofile
+copying src/lockprofile/__main__.py -> lockprofile-0.1.0/src/lockprofile
+copying src/lockprofile/bdd.py -> lockprofile-0.1.0/src/lockprofile
+copying src/lockprofile/cli.py -> lockprofile-0.1.0/src/lockprofile
+copying src/lockprofile/core.py -> lockprofile-0.1.0/src/lockprofile
+copying src/lockprofile/markers.py -> lockprofile-0.1.0/src/lockprofile
+copying src/lockprofile.egg-info/PKG-INFO -> lockprofile-0.1.0/src/lockprofile.egg-info
+copying src/lockprofile.egg-info/SOURCES.txt -> lockprofile-0.1.0/src/lockprofile.egg-info
+copying src/lockprofile.egg-info/dependency_links.txt -> lockprofile-0.1.0/src/lockprofile.egg-info
+copying src/lockprofile.egg-info/entry_points.txt -> lockprofile-0.1.0/src/lockprofile.egg-info
+copying src/lockprofile.egg-info/requires.txt -> lockprofile-0.1.0/src/lockprofile.egg-info
+copying src/lockprofile.egg-info/top_level.txt -> lockprofile-0.1.0/src/lockprofile.egg-info
+copying tests/test_bdd.py -> lockprofile-0.1.0/tests
+copying tests/test_cli.py -> lockprofile-0.1.0/tests
+copying tests/test_core.py -> lockprofile-0.1.0/tests
+copying tests/test_markers.py -> lockprofile-0.1.0/tests
+Writing lockprofile-0.1.0/setup.cfg
+Creating tar archive
+removing 'lockprofile-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=77
+* Getting build dependencies for wheel...
+running egg_info
+writing src/lockprofile.egg-info/PKG-INFO
+writing dependency_links to src/lockprofile.egg-info/dependency_links.txt
+writing entry points to src/lockprofile.egg-info/entry_points.txt
+writing requirements to src/lockprofile.egg-info/requires.txt
+writing top-level names to src/lockprofile.egg-info/top_level.txt
+reading manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/lockprofile
+copying src/lockprofile/core.py -> build/lib/lockprofile
+copying src/lockprofile/cli.py -> build/lib/lockprofile
+copying src/lockprofile/bdd.py -> build/lib/lockprofile
+copying src/lockprofile/__init__.py -> build/lib/lockprofile
+copying src/lockprofile/__main__.py -> build/lib/lockprofile
+copying src/lockprofile/markers.py -> build/lib/lockprofile
+running egg_info
+writing src/lockprofile.egg-info/PKG-INFO
+writing dependency_links to src/lockprofile.egg-info/dependency_links.txt
+writing entry points to src/lockprofile.egg-info/entry_points.txt
+writing requirements to src/lockprofile.egg-info/requires.txt
+writing top-level names to src/lockprofile.egg-info/top_level.txt
+reading manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'src/lockprofile.egg-info/SOURCES.txt'
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/lockprofile
+copying build/lib/lockprofile/core.py -> build/bdist.linux-x86_64/wheel/./lockprofile
+copying build/lib/lockprofile/cli.py -> build/bdist.linux-x86_64/wheel/./lockprofile
+copying build/lib/lockprofile/bdd.py -> build/bdist.linux-x86_64/wheel/./lockprofile
+copying build/lib/lockprofile/__init__.py -> build/bdist.linux-x86_64/wheel/./lockprofile
+copying build/lib/lockprofile/__main__.py -> build/bdist.linux-x86_64/wheel/./lockprofile
+copying build/lib/lockprofile/markers.py -> build/bdist.linux-x86_64/wheel/./lockprofile
+running install_egg_info
+Copying src/lockprofile.egg-info to build/bdist.linux-x86_64/wheel/./lockprofile-0.1.0-py3.15.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/lockprofile-0.1.0.dist-info/WHEEL
+creating '/downloads/lockprofile-private/dist/.tmp-mmyiu6b9/lockprofile-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'lockprofile/__init__.py'
+adding 'lockprofile/__main__.py'
+adding 'lockprofile/bdd.py'
+adding 'lockprofile/cli.py'
+adding 'lockprofile/core.py'
+adding 'lockprofile/markers.py'
+adding 'lockprofile-0.1.0.dist-info/licenses/LICENSE'
+adding 'lockprofile-0.1.0.dist-info/METADATA'
+adding 'lockprofile-0.1.0.dist-info/WHEEL'
+adding 'lockprofile-0.1.0.dist-info/entry_points.txt'
+adding 'lockprofile-0.1.0.dist-info/top_level.txt'
+adding 'lockprofile-0.1.0.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+Successfully built lockprofile-0.1.0.tar.gz and lockprofile-0.1.0-py3-none-any.whl
