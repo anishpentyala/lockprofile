@@ -1,0 +1,15 @@
+test_source_hash_and_candidate_order_are_part_of_identity (test_core.CoreTests.test_source_hash_and_candidate_order_are_part_of_identity) ... FAIL
+
+======================================================================
+FAIL: test_source_hash_and_candidate_order_are_part_of_identity (test_core.CoreTests.test_source_hash_and_candidate_order_are_part_of_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tmpe1or2lct/tests/test_core.py", line 87, in test_source_hash_and_candidate_order_are_part_of_identity
+    self.assertEqual(compare(a, b, self.env)["changed_profiles"]["profiles"], 8)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 8
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
