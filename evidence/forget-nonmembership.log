@@ -1,0 +1,25 @@
+test_hidden_non_monotone_change (test_core.CoreTests.test_hidden_non_monotone_change) ... FAIL
+
+======================================================================
+FAIL: test_hidden_non_monotone_change (test_core.CoreTests.test_hidden_non_monotone_change)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tmp_9775pnz/tests/test_core.py", line 49, in test_hidden_non_monotone_change
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        report["changed_profiles"]["witness"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {"extras": ["a"], "dependency_groups": []},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: {'extras': ['a', 'b'], 'dependency_groups': []} != {'extras': ['a'], 'dependency_groups': []}
+- {'dependency_groups': [], 'extras': ['a', 'b']}
+?                                         -----
+
++ {'dependency_groups': [], 'extras': ['a']}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
