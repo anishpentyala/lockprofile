@@ -1,0 +1,18 @@
+{
+  "drop-skipped-variable-count": {
+    "exit_code": 1,
+    "assertion_failures": 1
+  },
+  "forget-nonmembership": {
+    "exit_code": 1,
+    "assertion_failures": 1
+  },
+  "ignore-ambiguity": {
+    "exit_code": 1,
+    "assertion_failures": 1
+  },
+  "equate-different-identities": {
+    "exit_code": 1,
+    "assertion_failures": 1
+  }
+}
