@@ -36,24 +36,55 @@ def main(argv=None):
     parser.add_argument("before")
     parser.add_argument("after")
     parser.add_argument(
-        "--environment", required=True, help="JSON of all 11 marker environment fields"
+        "--environment",
+        required=True,
+        action="append",
+        help="JSON of all 11 marker environment fields; repeat for up to 16 explicit targets",
     )
     parser.add_argument("--max-nodes", type=int, default=100_000)
     args = parser.parse_args(argv)
     try:
-        old, new, env = (
-            read_regular(path) for path in (args.before, args.after, args.environment)
-        )
-        report = compare(
-            tomllib.loads(old.decode("utf-8")),
-            tomllib.loads(new.decode("utf-8")),
-            json.loads(env, object_pairs_hook=unique),
-            max_nodes=args.max_nodes,
-        )
-        report["receipts"] = {
-            label: {"sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)}
-            for label, raw in (("before", old), ("after", new), ("environment", env))
-        }
+        if len(args.environment) > 16:
+            raise ValueError("at most 16 explicit target environments")
+        old, new = (read_regular(path) for path in (args.before, args.after))
+        old_lock, new_lock = (tomllib.loads(raw.decode("utf-8")) for raw in (old, new))
+        reports = []
+        for path in args.environment:
+            env = read_regular(path)
+            result = compare(
+                old_lock,
+                new_lock,
+                json.loads(env, object_pairs_hook=unique),
+                max_nodes=args.max_nodes,
+            )
+            result["receipts"] = {
+                label: {"sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)}
+                for label, raw in (
+                    ("before", old),
+                    ("after", new),
+                    ("environment", env),
+                )
+            }
+            reports.append(result)
+        equivalent = all(item["status"] == "EQUIVALENT_IN_PROFILE" for item in reports)
+        if len(reports) == 1:
+            # Preserve the existing report shape for single-target callers.
+            report = reports[0]
+        else:
+            report = {
+                "schema_version": 1,
+                "mode": "EXPLICIT_TARGET_MATRIX",
+                "status": (
+                    "EQUIVALENT_IN_ALL_TARGETS"
+                    if equivalent
+                    else "CHANGED_OR_INVALID_TARGET"
+                ),
+                "target_count": len(reports),
+                "targets": [
+                    {"index": index, "report": item}
+                    for index, item in enumerate(reports)
+                ],
+            }
         output = json.dumps(report, indent=2, sort_keys=True, allow_nan=False) + "\n"
         sys.stdout.write(output)
         sys.stdout.flush()
@@ -63,7 +94,7 @@ def main(argv=None):
         except OSError:
             pass
         return 2
-    return 0 if report["status"] == "EQUIVALENT_IN_PROFILE" else 1
+    return 0 if equivalent else 1
 
 
 def entrypoint():
