@@ -1,0 +1,15 @@
+test_identical_overlapping_rows_still_invalid (test_core.CoreTests.test_identical_overlapping_rows_still_invalid) ... FAIL
+
+======================================================================
+FAIL: test_identical_overlapping_rows_still_invalid (test_core.CoreTests.test_identical_overlapping_rows_still_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tmptd3mkodl/tests/test_core.py", line 72, in test_identical_overlapping_rows_still_invalid
+    self.assertEqual(report["before_ambiguity"]["profiles"], 8)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 8
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
