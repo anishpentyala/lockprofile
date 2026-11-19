@@ -35,8 +35,37 @@ The source URLs in these examples are non-resolving placeholders.
 Supply all 11 `packaging.markers` environment fields in the JSON, with strings
 as values. `python_version` must agree with `python_full_version` major.minor.
 Nothing is filled from the host. These fields are assertions, not a verified
-interpreter or proof that a platform tuple exists. Run separately for each target
-you need; there is no universal quantification over Python versions/platforms.
+interpreter or proof that a platform tuple exists. Pass one file per target you need; there is no universal quantification over
+Python versions/platforms.
+
+### Explicit target matrix
+
+Repeat `--environment` to check up to 16 complete target assertions in one
+invocation. A single environment keeps the existing report shape and exit codes.
+Multiple environments return an `EXPLICIT_TARGET_MATRIX` envelope. Each ordered
+`targets` item contains its zero-based `index` and the complete independent
+`report`, including that target's environment receipt, profile counts and witness.
+Duplicate targets are retained, not deduplicated.
+
+```sh
+lockprofile examples/before.toml examples/after.toml \
+  --environment examples/linux311.json \
+  --environment examples/windows311.json
+```
+
+Exit 0 and `EQUIVALENT_IN_ALL_TARGETS` mean every **supplied target** has no change
+in the narrow selection profile. Exit 1 and `CHANGED_OR_INVALID_TARGET` mean at
+least one target reports a difference, invalid profile or no common permitted
+profile. Inspect each nested report for the reason. Counts are not added across
+targets; overlapping or duplicate environment assertions are not a count of
+unique installations. Nothing about an omitted target is established.
+
+The before/after files are read once. The output is held until every target has
+been checked. A missing, malformed, unsupported or over-budget later target
+returns exit 2 with no success report, even if earlier targets passed. Input byte
+limits apply per file and `--max-nodes` applies separately to each comparison,
+not to the entire matrix. A matrix can therefore use more memory and time than a
+single comparison. This is not a parallel executor or a hostile-input sandbox.
 
 ## What is compared
 
@@ -106,7 +135,8 @@ input sandbox, wall-clock guarantee, or strict memory limit. Some Boolean
 functions still grow exponentially and fail the node budget.
 
 One complete JSON document is emitted only after the comparison succeeds.
-Exit **0** means `EQUIVALENT_IN_PROFILE`; **1** means a change, invalid profile,
+Exit **0** means `EQUIVALENT_IN_PROFILE` for one target, or
+`EQUIVALENT_IN_ALL_TARGETS` for a matrix; **1** means a change, invalid profile,
 or `NO_COMMON_PERMITTED_PROFILE`; **2** means unsupported/invalid input, limit,
 I/O or output failure. An output failure can leave a partial prefix at its
 recipient. Never treat exit 2 as an audit or a negative finding. Two locks that
