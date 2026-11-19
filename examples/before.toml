@@ -1,0 +1,10 @@
+lock-version = "1.0"
+created-by = "lockprofile synthetic example, not a real release"
+extras = ["color", "progress"]
+dependency-groups = ["dev"]
+
+[[packages]]
+name = "demo"
+version = "1.0"
+marker = "'color' in extras and 'progress' not in extras"
+wheels = [{url = "https://example.invalid/demo-1.0-py3-none-any.whl", hashes = {sha256 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}]
