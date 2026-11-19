@@ -1,0 +1,3 @@
+recursive-include tests *.py
+recursive-include examples *.json *.toml
+recursive-include evidence *.py *.md *.log *.json *.toml *.txt
