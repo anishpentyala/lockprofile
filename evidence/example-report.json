@@ -1,0 +1,127 @@
+{
+  "after_ambiguity": {
+    "profiles": 0,
+    "witness": null
+  },
+  "after_python_incompatible": {
+    "profiles": 0,
+    "witness": null
+  },
+  "applicability_changed": {
+    "profiles": 0,
+    "witness": null
+  },
+  "bdd_nodes": 7,
+  "before_ambiguity": {
+    "profiles": 0,
+    "witness": null
+  },
+  "before_python_incompatible": {
+    "profiles": 0,
+    "witness": null
+  },
+  "changed_profiles": {
+    "profiles": 2,
+    "witness": {
+      "dependency_groups": [],
+      "extras": [
+        "color"
+      ]
+    }
+  },
+  "common_permitted_profiles": 8,
+  "comparable_profiles": 8,
+  "default_invocation": {
+    "after": {
+      "ambiguous": false,
+      "permitted": true,
+      "python_incompatible": false,
+      "selected": {}
+    },
+    "before": {
+      "ambiguous": false,
+      "permitted": true,
+      "python_incompatible": false,
+      "selected": {}
+    },
+    "changed": false
+  },
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.11.18",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_python_implementation": "CPython",
+    "platform_release": "synthetic-kernel",
+    "platform_system": "Linux",
+    "platform_version": "synthetic-version",
+    "python_full_version": "3.11.18",
+    "python_version": "3.11",
+    "sys_platform": "linux"
+  },
+  "explicit_profiles": 8,
+  "features": {
+    "dependency_groups": [
+      "dev"
+    ],
+    "extras": [
+      "color",
+      "progress"
+    ]
+  },
+  "package_changes": [
+    {
+      "after": [
+        {
+          "version": "2.0",
+          "wheels": [
+            {
+              "hashes": {
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "url": "https://example.invalid/demo-2.0-py3-none-any.whl"
+            }
+          ]
+        }
+      ],
+      "before": [
+        {
+          "version": "1.0",
+          "wheels": [
+            {
+              "hashes": {
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "url": "https://example.invalid/demo-1.0-py3-none-any.whl"
+            }
+          ]
+        }
+      ],
+      "name": "demo",
+      "profiles": 2,
+      "witness": {
+        "dependency_groups": [],
+        "extras": [
+          "color"
+        ]
+      }
+    }
+  ],
+  "receipts": {
+    "after": {
+      "bytes": 406,
+      "sha256": "3da2fe8cb6bebcc05a5066c6404a6db1e1eba4ad013b3f340f0ff402460668f6"
+    },
+    "before": {
+      "bytes": 406,
+      "sha256": "ec914fb50767dea1a792edc239349d0ef7bd39847ba0ea65845517bb01be5711"
+    },
+    "environment": {
+      "bytes": 385,
+      "sha256": "097b376c05f58d85596f45da2ec0ca494154a6dffc58173cf1f12eaf76a8a934"
+    }
+  },
+  "schema_version": 1,
+  "scope": "declared version/source-candidate selection; not installation or artifact bytes",
+  "status": "CHANGED_OR_INVALID_PROFILE"
+}
