@@ -1,0 +1,15 @@
+test_large_symbolic_domain (test_core.CoreTests.test_large_symbolic_domain) ... FAIL
+
+======================================================================
+FAIL: test_large_symbolic_domain (test_core.CoreTests.test_large_symbolic_domain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tmpk280z5z4/tests/test_core.py", line 221, in test_large_symbolic_domain
+    self.assertEqual(report["changed_profiles"]["profiles"], 1 << 78)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 75557863725914323419136 != 302231454903657293676544
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
