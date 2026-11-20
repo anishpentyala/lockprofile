@@ -259,4 +259,4 @@ def compare(before, after, environment, *, max_nodes=100_000):
             "after": default[1],
         },
         "bdd_nodes": len(bdd.nodes),
-        }
+    }
