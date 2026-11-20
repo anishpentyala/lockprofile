@@ -5,6 +5,7 @@ from collections import defaultdict
 
 from packaging.pylock import Pylock, PylockValidationError
 from packaging.specifiers import SpecifierSet
+from packaging.utils import canonicalize_name
 from packaging.version import Version
 
 from .bdd import BDD
@@ -56,18 +57,21 @@ def load_lock(data):
 
 def known_features(lock):
     return {
-        (key, name)
+        (key, canonicalize_name(name))
         for key, field in (
             ("extras", "extras"),
             ("dependency_groups", "dependency-groups"),
         )
         for name in lock.get(field, [])
-    } | {("dependency_groups", name) for name in lock.get("default-groups", [])}
+    } | {
+        ("dependency_groups", canonicalize_name(name))
+        for name in lock.get("default-groups", [])
+    }
 
 
 def public_features(lock):
     return {
-        (key, name)
+        (key, canonicalize_name(name))
         for key, field in (
             ("extras", "extras"),
             ("dependency_groups", "dependency-groups"),
@@ -201,7 +205,10 @@ def compare(before, after, environment, *, max_nodes=100_000):
     applicability = bdd.apply("xor", left["permitted"], right["permitted"])
     default = []
     for lock in (before, after):
-        constants = {("dependency_groups", x) for x in lock.get("default-groups", [])}
+        constants = {
+            ("dependency_groups", canonicalize_name(x))
+            for x in lock.get("default-groups", [])
+        }
         dbdd = BDD([], max_nodes=max_nodes)
         side = compile_lock(
             lock, Compiler(dbdd, environment, known_features(lock), constants)
@@ -240,8 +247,10 @@ def compare(before, after, environment, *, max_nodes=100_000):
         "scope": "declared version/source-candidate selection; not installation or artifact bytes",
         "environment": environment,
         "features": {
-            "extras": sorted(before.get("extras", [])),
-            "dependency_groups": sorted(before.get("dependency-groups", [])),
+            "extras": sorted(name for key, name in features if key == "extras"),
+            "dependency_groups": sorted(
+                name for key, name in features if key == "dependency_groups"
+            ),
         },
         "explicit_profiles": 1 << len(features),
         "common_permitted_profiles": bdd.count(common),
