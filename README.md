@@ -76,7 +76,12 @@ single comparison. This is not a parallel executor or a hostile-input sandbox.
   A default-only change or ambiguity is not hidden by the explicit-profile result.
 - At the fixed environment, scalar marker atoms are constants. Literal
   membership/nonmembership of extras/groups is symbolic. Parentheses, `and` and
-  `or` have their usual marker precedence. Set names use PEP 685 normalization.
+  `or` have their usual marker precedence. Set names use PEP 685/735 normalization in
+  declarations, marker literals and
+  synthetic defaults. Reports and witnesses use normalized names. Different
+  spellings of the same normalized name are one feature, not independent
+  choices, matching the reference evaluator's set membership. Extras and groups
+  remain separate namespaces.
 - Identically named active rows are ambiguous even if their contents are identical.
   Ambiguous profiles and profiles with an active package's incompatible
   `requires-python` are reported separately, not counted as comparable successes.
