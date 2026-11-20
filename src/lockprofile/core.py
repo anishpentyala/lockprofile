@@ -3,7 +3,7 @@
 import json
 from collections import defaultdict
 
-from packaging.pylock import Pylock
+from packaging.pylock import Pylock, PylockValidationError
 from packaging.specifiers import SpecifierSet
 from packaging.version import Version
 
@@ -35,7 +35,10 @@ def load_lock(data):
         raise ValueError("only lock-version 1.0 is supported")
     if len(data.get("packages", [])) > 2000:
         raise ValueError("at most 2000 package rows are supported")
-    Pylock.from_dict(data)  # Public structural validator; no install or network.
+    try:
+        Pylock.from_dict(data)  # Public structural validator; no install or network.
+    except PylockValidationError as exc:
+        raise ValueError("invalid pylock: " + str(exc)) from exc
     if "environments" in data:
         if not data["environments"]:
             raise ValueError("empty environments list is unsupported")
@@ -256,4 +259,4 @@ def compare(before, after, environment, *, max_nodes=100_000):
             "after": default[1],
         },
         "bdd_nodes": len(bdd.nodes),
-    }
+        }
