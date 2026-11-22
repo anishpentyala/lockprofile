@@ -46,6 +46,29 @@ class BDD:
     def apply(self, op, a, b):
         if op not in {"and", "or", "xor"}:
             raise ValueError("unsupported Boolean operation")
+        # Reduce identities before recursive/cache work. Do not turn XOR with
+        # true into neg(): neg itself is implemented with XOR.
+        if a == b:
+            return 0 if op == "xor" else a
+        if op == "and":
+            if a == 0 or b == 0:
+                return 0
+            if a == 1:
+                return b
+            if b == 1:
+                return a
+        elif op == "or":
+            if a == 1 or b == 1:
+                return 1
+            if a == 0:
+                return b
+            if b == 0:
+                return a
+        else:
+            if a == 0:
+                return b
+            if b == 0:
+                return a
         return self._apply(op, min(a, b), max(a, b))
 
     def neg(self, a):
