@@ -100,7 +100,12 @@ single comparison. This is not a parallel executor or a hostile-input sandbox.
 The reduced ordered BDD shares Boolean subproblems instead of enumerating all
 profiles. Counts include variables skipped by a reduced node. Witnesses minimize
 the number of enabled features, then break ties by lexical `(set, name)` order.
-All unlisted features in a witness are disabled.
+All unlisted features in a witness are disabled. Boolean operations reduce constant
+and identical-node identities before recursive cache work. This avoids walking
+an existing diagram for cases such as `x AND x`, `x OR false` and `x XOR x`;
+it does not change selected profiles, exact counts, witnesses or node budgets.
+This is not a general runtime or memory bound, and it does not avoid exponential
+growth for difficult Boolean functions.
 
 ## What this does not prove
 
